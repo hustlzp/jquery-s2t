@@ -1,4 +1,4 @@
-tradition.js
-======
+#tradition.js
+
 
 Convert between Simple Chinese and Traditional Chinese.
