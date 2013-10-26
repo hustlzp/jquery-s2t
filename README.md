@@ -8,6 +8,16 @@ Convert between Traditional Chinese and Simplified Chinese.
 
 `t2s` means Convert Traditional Chinese to Simplified Chinese.
 
+First you should import `tradition.js`:
+
+```html
+<script type='text/javascript' src="tradition.js"></script>
+
+```
+
+Then enjoy:
+
+
 ``` javascript
 // Convert string
 var result = s2t('我是程序员！');
@@ -22,4 +32,4 @@ t2s(wap);
 var paras = document.getElementsByTagName('p');
 s2t(paras);
 t2s(paras);
-``
+```
