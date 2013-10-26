@@ -1,18 +1,25 @@
 #tradition.js
 
-Convert between Traditional and Simplified Chinese.
+Convert between Traditional Chinese and Simplified Chinese.
 
 ## Usage
-    // convert string
-    var result = s2t('我是程序员！');
-    var result = t2s('我是程序员！');
 
-    // convert contents of a HTML Node
-    var wap = document.getElementById('content-wap');
-    s2t(wap);
-    t2s(wap);
+`s2t` means Convert Simplified Chinese To Traditional Chinese.
 
-    // convert contents of a HTML NodeList
-    var paras = document.getElementsByTagName('p');
-    s2t(wap);
-    t2s(wap);
+`t2s` means Convert Traditional Chinese to Simplified Chinese.
+
+``` javascript
+// Convert string
+var result = s2t('我是程序员！');
+var result = t2s('我是程序员！');
+
+// Convert contents of a HTML Node
+var wap = document.getElementById('content-wap');
+s2t(wap);
+t2s(wap);
+
+// Convert contents of a HTML NodeList
+var paras = document.getElementsByTagName('p');
+s2t(paras);
+t2s(paras);
+``
