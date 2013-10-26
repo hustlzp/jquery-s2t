@@ -1,17 +1,34 @@
 <html>
 <head>
-   <title>tradition.js</title>
+   <title>Test for tradition.js</title>
 </head>
 <body>
 
-<p id='s'>我是程序员！</p>
-<p id='s'>我是程序员！</p>
+<h1>NodeList测试</h1>
+<p class='para'>我是程序员！</p>
+<p class='para'>我是程序员！</p>
+
+<h1>Node测试</h1>
+<div id='content-wap'>
+   <p>我是程序员！</p>
+   <p>我是程序员！</p>
+</div>
+
+<h1>文本测试</h1>
+<p id='text-result'></p>
 
 <script type='text/javascript' src="tradition.js"></script>
 <script type="text/javascript">
-   var p = document.getElementsByTagName('p');
-   s2t(p);
-   alert(s2t("我是程序员！"));
+   var paras = 
+
+   // Node测试
+   s2t(document.getElementById('content-wap'));
+
+   // NodeList测试
+   s2t(document.getElementsByClassName('para'));
+   
+   // 文本测试
+   document.getElementById('text-result').innerHTML = s2t("我是程序员！");
 </script>
 
 </body>
