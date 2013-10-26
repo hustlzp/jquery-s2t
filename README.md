@@ -20,7 +20,7 @@ Then enjoy:
 ``` javascript
 // Convert string
 var result = s2t('我是程序员！');
-var result = t2s('我是程序员！');
+var result = t2s('我是程序員！');
 
 // Convert contents of a HTML Node
 var wap = document.getElementById('content-wap');
