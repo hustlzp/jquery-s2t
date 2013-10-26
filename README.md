@@ -12,7 +12,6 @@ First you should import `tradition.js`:
 
 ```html
 <script type='text/javascript' src="tradition.js"></script>
-
 ```
 
 Then enjoy:
