@@ -26,3 +26,7 @@ var result = $.t2s('我是程序員！');
 $('.content-wap').s2t();
 $('.content-wap').t2s();
 ```
+
+## Examples
+
+西窗烛 http://www.xichuangzhu.com
