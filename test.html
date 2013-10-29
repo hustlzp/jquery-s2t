@@ -1,35 +1,35 @@
 <html>
 <head>
-   <title>Test for tradition.js</title>
+   <title>Test for jquery-s2t</title>
+   <script type="text/javascript" src="jquery.min.js"></script>
+   <script type='text/javascript' src="jquery.s2t.js"></script>
+   <script type="text/javascript">
+      $(function() {
+         // 文本测试
+         $('#text-result').text($.s2t("我是程序员！"));
+
+         // HTML Node测试
+         $('#content-wap').s2t();
+
+         // HTML Nodes测试
+         $('.para').s2t();
+      });
+   </script>
 </head>
 <body>
 
-<h1>NodeList测试</h1>
-<p class='para'>我是程序员！</p>
-<p class='para'>我是程序员！</p>
+<h1>文本测试</h1>
+<p id='text-result'></p>
 
-<h1>Node测试</h1>
+<h1>HTML Node测试</h1>
 <div id='content-wap'>
    <p>我是程序员！</p>
    <p>我是程序员！</p>
 </div>
 
-<h1>文本测试</h1>
-<p id='text-result'></p>
-
-<script type='text/javascript' src="tradition.js"></script>
-<script type="text/javascript">
-   var paras = 
-
-   // Node测试
-   s2t(document.getElementById('content-wap'));
-
-   // NodeList测试
-   s2t(document.getElementsByClassName('para'));
-   
-   // 文本测试
-   document.getElementById('text-result').innerHTML = s2t("我是程序员！");
-</script>
+<h1>HTML Nodes测试</h1>
+<p class='para'>我是程序员！</p>
+<p class='para'>我是程序员！</p>
 
 </body>
 </html>

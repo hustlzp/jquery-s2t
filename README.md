@@ -1,34 +1,28 @@
-#tradition.js
+#jquery-s2t
 
-Convert between Traditional Chinese and Simplified Chinese.
+A simple jQuery plugin for conversion between Traditional Chinese and Simplified Chinese.
 
 ## Usage
 
-`s2t` means Convert Simplified Chinese To Traditional Chinese.
+`s2t` means Convert Simplified Chinese to Traditional Chinese.
 
 `t2s` means Convert Traditional Chinese to Simplified Chinese.
 
-First you should import `tradition.js`:
+First You should import `jQuery1.6+` and `jquery.s2t.js`:
 
-```html
-<script type='text/javascript' src="tradition.js"></script>
+``` html
+<script type='text/javascript' src="jquery.min.js"></script>
+<script type='text/javascript' src="jquery.s2t.js"></script>
 ```
 
-Then enjoy:
-
+Enjoy:
 
 ``` javascript
 // Convert string
-var result = s2t('我是程序员！');
-var result = t2s('我是程序員！');
+var result = $.s2t('我是程序员！');
+var result = $.t2s('我是程序員！');
 
-// Convert contents of a HTML Node
-var wap = document.getElementById('content-wap');
-s2t(wap);
-t2s(wap);
-
-// Convert contents of a HTML NodeList
-var paras = document.getElementsByTagName('p');
-s2t(paras);
-t2s(paras);
+// Convert contents of HTML Node
+$('.content-wap').s2t();
+$('.content-wap').t2s();
 ```
