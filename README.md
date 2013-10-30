@@ -29,4 +29,4 @@ $('.content-wap').t2s();
 
 ## Examples
 
-西窗烛 http://www.xichuangzhu.com
+西窗烛 - http://www.xichuangzhu.com

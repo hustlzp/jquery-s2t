@@ -2,6 +2,7 @@
  * jquery-s2t v0.0.1
  * A simple jQuery plugin to convert between Simplified Chinese and Traditional Chinese.
  * https://github.com/hustlzp/jquery-s2t
+ *
  * Copyright 2013 hustlzp
  * Released under the MIT license
  */
