@@ -4,9 +4,9 @@ A simple jQuery plugin to convert between Simplified Chinese and Traditional Chi
 
 ## Usage
 
-`s2t` means Convert Simplified Chinese to Traditional Chinese.
+`s2t`: convert Simplified Chinese to Traditional Chinese.
 
-`t2s` means Convert Traditional Chinese to Simplified Chinese.
+`t2s`: convert Traditional Chinese to Simplified Chinese.
 
 First You should import `jQuery1.6+` and `jquery.s2t.js`:
 
@@ -27,6 +27,6 @@ $('.content-wap').s2t();
 $('.content-wap').t2s();
 ```
 
-## Examples
+## Websites using jquery-s2t
 
 西窗烛 - http://www.xichuangzhu.com
