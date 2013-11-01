@@ -53,19 +53,22 @@
         }
 
         for (i = 0; i < str.length; i++) {
+            letter = str.charAt(i);
+            code = str.charCodeAt(i); 
+            
             // 根据字符的Unicode判断是否为汉字，以提高性能
             // 参考:
             // [1] http://www.unicode.org
             // [2] http://zh.wikipedia.org/wiki/Unicode%E5%AD%97%E7%AC%A6%E5%88%97%E8%A1%A8
             // [3] http://xylonwang.iteye.com/blog/519552
-            code = str.charCodeAt(i);            
+           
             isChinese = (code > 0x3400 && code < 0x9FC3) || (code > 0xF900 && code < 0xFA6A);
 
             if (!isChinese) {
+                result += letter;
                 continue;
             }
 
-            letter = str.charAt(i);
             index = src.indexOf(letter);
 
             if (index !== -1) {

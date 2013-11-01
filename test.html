@@ -4,32 +4,50 @@
    <script type="text/javascript" src="jquery.min.js"></script>
    <script type='text/javascript' src="jquery.s2t.js"></script>
    <script type="text/javascript">
+   var isSimplified = true;
+
    $(function() {
-      // 文本测试
-      $('#text-result').text($.s2t("我是程序员！"));
 
-      // HTML Node测试
-      $('#content-wap').s2t();
+      $('#btn-convert').click(function() {
+         if (isSimplified) {
+            var text = $('#text-result').text();
+            
+            $('#text-result').text($.s2t(text));
+            $('#content-wap').s2t();
+            $('.para').s2t();
 
-      // HTML Nodes测试
-      $('.para').s2t();
+            isSimplified = false;
+            $(this).text('繁');
+         } else {
+            var text = $('#text-result').text();
+            
+            $('#text-result').text($.t2s(text));
+            $('#content-wap').t2s();
+            $('.para').t2s();
+            
+            isSimplified = true;
+            $(this).text('简');
+         }
+      });
    });
    </script>
 </head>
 <body>
 
-<h1>文本测试</h1>
-<p id='text-result'></p>
+<button id='btn-convert'>简</button>
 
-<h1>HTML Node测试</h1>
+<h1>文本测试</h1>
+<p id='text-result'>我是程序员！</p>
+
+<h1>HTML Element测试</h1>
 <div id='content-wap'>
-   <p>我是程序员！</p>
-   <p>我是程序员！</p>
+   <p alt='我是程序员！' title='我是程序员！'>我是程序员！</p>
+   <p alt='我是程序员！' title='我是程序员！'>我是程序员！</p>
 </div>
 
-<h1>HTML Nodes测试</h1>
-<p class='para'>我是程序员！</p>
-<p class='para'>我是程序员！</p>
+<h1>HTML Elements测试</h1>
+<p alt='我是程序员！' title='我是程序员！' class='para'>我是程序员！</p>
+<p alt='我是程序员！' title='我是程序员！' class='para'>我是程序员！</p>
 
 </body>
 </html>
