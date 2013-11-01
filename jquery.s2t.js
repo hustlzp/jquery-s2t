@@ -27,9 +27,9 @@
 
     /**
      * 转换文本
-     * @param {string} str - 待转换的文本
-     * @param {boolean} toT - 是否转换成繁体
-     * @returns {string} - 转换结果
+     * @param {String} str - 待转换的文本
+     * @param {Boolean} toT - 是否转换成繁体
+     * @returns {String} - 转换结果
      */
     function tranStr(str, toT) {
         var i;
@@ -82,9 +82,31 @@
     }
 
     /**
+     * 转换HTML Element属性
+     * @param {Element} element - 待转换的HTML Element节点
+     * @param {String|Array} attr - 待转换的属性/属性列表
+     * @param {Boolean} toT - 是否转换成繁体
+     */
+    function tranAttr(element, attr, toT) {
+        var i, attrValue;
+
+        if (attr instanceof Array) {
+            for(i = 0; i < attr.length; i++) {
+                tranAttr(element, attr[i], toT);
+            }
+        } else {
+            attrValue = element.getAttribute(attr);
+
+            if (attrValue !== "" && attrValue !== null) {
+                element.setAttribute(attr, tranStr(attrValue, toT));
+            }
+        }
+    }
+
+    /**
      * 转换HTML Element节点
      * @param {Element} element - 待转换的HTML Element节点
-     * @param {boolean} toT - 是否转换成繁体
+     * @param {Boolean} toT - 是否转换成繁体
      */
     function tranElement(element, toT) {
         var i;
@@ -106,15 +128,7 @@
                     continue;
                 }
                 
-                // title 属性
-                if (childNode.title !== "" && childNode.title !== null) {
-                    childNode.title = tranStr(childNode.title, toT);
-                }
-
-                // alt 属性
-                if (childNode.alt !== "" && childNode.alt !== null) {
-                    childNode.alt = tranStr(childNode.alt, toT);
-                }
+                tranAttr(childNode, ['title', 'data-original-title', 'alt', 'placeholder'], toT);
 
                 // input 标签
                 // 对text类型的input输入框不做处理
@@ -138,8 +152,8 @@
     $.extend({
         /**
          * 文本简转繁
-         * @param {string} str - 待转换的文本
-         * @returns {string} 转换结果
+         * @param {String} str - 待转换的文本
+         * @returns {String} 转换结果
          */
         s2t: function(str) {
             return tranStr(str, true);
@@ -147,8 +161,8 @@
 
         /**
          * 文本繁转简
-         * @param {string} str - 待转换的文本
-         * @returns {string} 转换结果
+         * @param {String} str - 待转换的文本
+         * @returns {String} 转换结果
          */
         t2s: function(str) {
             return tranStr(str, false);

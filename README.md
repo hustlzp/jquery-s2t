@@ -2,6 +2,14 @@
 
 A jQuery plugin to convert between Simplified Chinese and Traditional Chinese.
 
+## Features
+- Convert string
+- Convert text in HTML Elements and all of its child nodes
+- Convert `alt`, `placeholder`, `title` attributes of HTML Elements
+- Suooprt `Tooltip` in Bootstrap
+- Support 2553 Simplified-Traditional entries
+- Support IE6+, Chrome, Firefox and more
+
 ## Usage
 
 `s2t` convert Simplified Chinese to Traditional Chinese.
@@ -29,4 +37,4 @@ $('.content-wap').t2s();
 
 ## Websites using jquery-s2t
 
-西窗烛  http://www.xichuangzhu.com
+西窗烛 http://www.xichuangzhu.com
