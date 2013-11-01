@@ -112,7 +112,7 @@
         var i;
         var childNodes;
 
-        if (!(element instanceof Element)) {
+        if (element.nodeType !== 1) {
             return;
         }
 
