@@ -1,9 +1,10 @@
 ﻿/**
  * jquery-s2t v0.0.2
- * https://github.com/hustlzp/jquery-s2t
  *
+ * https://github.com/hustlzp/jquery-s2t
  * A jQuery plugin to convert between Simplified Chinese and Traditional Chinese.
- * Supported IE6+, Chrome, Firefox.
+ * Tested in IE6+, Chrome, Firefox.
+ *
  * Copyright 2013 hustlzp
  * Released under the MIT license
  */
@@ -61,7 +62,6 @@
             // [1] http://www.unicode.org
             // [2] http://zh.wikipedia.org/wiki/Unicode%E5%AD%97%E7%AC%A6%E5%88%97%E8%A1%A8
             // [3] http://xylonwang.iteye.com/blog/519552
-           
             isChinese = (code > 0x3400 && code < 0x9FC3) || (code > 0xF900 && code < 0xFA6A);
 
             if (!isChinese) {
