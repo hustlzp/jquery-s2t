@@ -6,9 +6,9 @@ A jQuery plugin to convert between Simplified Chinese and Traditional Chinese.
 - Convert string
 - Convert text in HTML Elements and all of its child nodes
 - Convert `alt`, `placeholder`, `title` attributes of HTML Elements
-- Suooprt `Tooltip` in Bootstrap
+- Support `Tooltip` in Bootstrap
 - Support 2553 Simplified-Traditional entries
-- Support IE6+, Chrome, Firefox and more
+- Tested in IE6+, Chrome, Firefox and more
 
 ## Usage
 
