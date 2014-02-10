@@ -1,0 +1,21 @@
+{
+  "name": "jquery-s2t",
+  "version": "0.1.0",
+  "homepage": "https://github.com/hustlzp/jquery-s2t",
+  "authors": [
+    "hustlzp <hustlzp@qq.com>"
+  ],
+  "description": "A jQuery plugin to convert between Simplified Chinese and Traditional Chinese.",
+  "main": "./jquery.s2t.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  }
+}
