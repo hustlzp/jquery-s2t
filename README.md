@@ -11,7 +11,7 @@ A jQuery plugin to convert between Simplified Chinese and Traditional Chinese.
 
 ## Install
 
-You can download `jquery.s2t.js` or install via bower:
+You can just download `jquery.s2t.js`, or install via bower:
 
 ```sh
 bower install jquery-s2t
