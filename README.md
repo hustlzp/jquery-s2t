@@ -9,6 +9,14 @@ A jQuery plugin to convert between Simplified Chinese and Traditional Chinese.
 - Support 2553 Simplified-Traditional entries
 - Tested in IE6+, Chrome, Firefox
 
+## Install
+
+You can download `jquery.s2t.js` or install via bower:
+
+```sh
+bower install jquery-s2t
+```
+
 ## Usage
 
 `s2t` convert Simplified Chinese to Traditional Chinese.
