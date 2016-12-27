@@ -44,4 +44,4 @@ $('.content-wap').t2s();
 
 ## Websites using jquery-s2t
 
-西窗烛 http://www.xichuangzhu.com
+None
